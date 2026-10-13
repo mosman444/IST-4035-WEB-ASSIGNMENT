@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nomads Africa Safaris</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'DM Sans', sans-serif;
+background: #f5f1e8;
+color: #07382d;
+}
+
+header {
+background: #07382d;
+color: white;
+padding: 22px 8%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.logo {
+font-family: 'Playfair Display', serif;
+font-size: 22px;
+letter-spacing: 1px;
+}
+
+.logo span {
+display: block;
+font-family: 'DM Sans', sans-serif;
+font-size: 10px;
+letter-spacing: 4px;
+margin-top: 4px;
+}
+
+nav {
+display: flex;
+align-items: center;
+gap: 25px;
+}
+
+nav a {
+text-decoration: none;
+color: white;
+font-size: 13px;
+}
+
+nav .contact {
+border: 1px solid #d8b47b;
+padding: 11px 17px;
+}
+
+.hero {
+min-height: 600px;
+background:
+linear-gradient(
+90deg,
+rgba(3, 35, 25, 0.78),
+rgba(3, 35, 25, 0.15)
+),
+url("https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1800&q=85")
+center/cover;
+display: flex;
+align-items: center;
+padding: 80px 8%;
+color: white;
+}
+
+.hero-content {
+max-width: 700px;
+}
+
+.eyebrow {
+color: #e4c18b;
+text-transform: uppercase;
+letter-spacing: 3px;
+font-size: 11px;
+margin-bottom: 22px;
+}
+
+h1 {
+font-family: 'Playfair Display', serif;
+font-size: clamp(44px, 7vw, 78px);
+font-weight: 500;
+line-height: 1.1;
+margin-bottom: 24px;
+}
+
+h1 span {
+color: #e4c18b;
+}
+
+.hero p {
+max-width: 470px;
+line-height: 1.9;
+font-size: 14px;
+color: #eee9df;
+}
+
+.buttons {
+display: flex;
+gap: 15px;
+margin-top: 30px;
+flex-wrap: wrap;
+}
+
+.btn {
+padding: 15px 23px;
+text-decoration: none;
+font-size: 12px;
+font-weight: 600;
+display: inline-block;
+}
+
+.btn-primary {
+background: #d96b36;
+color: white;
+}
+
+.btn-secondary {
+border: 1px solid white;
+color: white;
+}
+
+.intro {
+text-align: center;
+padding: 85px 8% 45px;
+}
+
+.intro h2 {
+font-family: 'Playfair Display', serif;
+font-size: clamp(32px, 4vw, 48px);
+font-weight: 500;
+margin-bottom: 20px;
+}
+
+.intro p {
+max-width: 620px;
+margin: auto;
+font-size: 13px;
+line-height: 1.9;
+color: #65756b;
+}
+
+.destinations {
+padding: 20px 8% 85px;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 22px;
+}
+
+.destination {
+height: 360px;
+position: relative;
+overflow: hidden;
+background: #07382d;
+}
+
+.destination img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform 0.4s;
+}
+
+.destination:hover img {
+transform: scale(1.06);
+}
+
+.destination::after {
+content: "";
+position: absolute;
+inset: 0;
+background: linear-gradient(
+transparent 30%,
+rgba(3, 30, 22, 0.9)
+);
+}
+
+.destination-info {
+position: absolute;
+z-index: 1;
+bottom: 25px;
+left: 23px;
+color: white;
+}
+
+.destination-info small {
+color: #e4c18b;
+text-transform: uppercase;
+letter-spacing: 2px;
+}
+
+.destination-info h3 {
+font-family: 'Playfair Display', serif;
+font-size: 32px;
+font-weight: 500;
+margin: 8px 0;
+}
+
+.destination-info p {
+font-size: 12px;
+margin-bottom: 18px;
+}
+
+.destination-info a {
+color: #e4c18b;
+font-size: 12px;
+text-decoration: none;
+border-bottom: 1px solid #e4c18b;
+padding-bottom: 5px;
+}
+
+.bottom-cta {
+background: #07382d;
+color: white;
+padding: 65px 8%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 25px;
+}
+
+.bottom-cta h2 {
+font-family: 'Playfair Display', serif;
+font-size: clamp(28px, 4vw, 42px);
+font-weight: 500;
+margin-bottom: 12px;
+}
+
+.bottom-cta p {
+color: #d0ddd5;
+font-size: 13px;
+line-height: 1.8;
+}
+
+footer {
+background: #042820;
+color: #c4d0c8;
+padding: 25px 8%;
+display: flex;
+justify-content: space-between;
+gap: 15px;
+font-size: 11px;
+}
+
+@media (max-width: 768px) {
+header {
+padding: 20px 6%;
+}
+
+nav {
+gap: 12px;
+}
+
+nav a {
+font-size: 11px;
+}
+
+nav a:not(.contact) {
+display: none;
+}
+
+.hero {
+min-height: 570px;
+padding: 65px 6%;
+background-position: 60% center;
+}
+
+.destinations {
+grid-template-columns: 1fr;
+padding: 15px 6% 65px;
+}
+
+.destination {
+height: 350px;
+}
+
+.intro {
+padding: 65px 6% 35px;
+}
+
+.bottom-cta {
+padding: 50px 6%;
+align-items: flex-start;
+flex-direction: column;
+}
+
+footer {
+padding: 25px 6%;
+flex-direction: column;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">
+NOMADS AFRICA
+<span>SAFARIS</span>
+</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#destinations">Destinations</a>
+<a href="#about">About</a>
+<a href="#contact" class="contact">Plan Your Safari ↗</a>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<div class="hero-content">
+<div class="eyebrow">
+Wild at heart. African by nature.
+</div>
+
+<h1>
+Experience the<br>
+<span>Wild Heart</span> of Africa.
+</h1>
+
+<p>
+Discover golden savannahs, breathtaking landscapes,
+and unforgettable wildlife encounters.
+Your African adventure begins here.
+</p>
+
+<div class="buttons">
+<a href="#destinations" class="btn btn-primary">
+Explore Safaris ↗
+</a>
+
+<a href="#about" class="btn btn-secondary">
+Discover Our Story
+</a>
+</div>
+</div>
+</section>
+
+<section class="intro" id="about">
+<div class="eyebrow" style="color:#a56d37">
+Discover East Africa
+</div>
+
+<h2>Embark on a Journey<br>of a Lifetime</h2>
+
+<p>
+Experience the extraordinary beauty of Africa with
+personalised safari adventures. From the sweeping plains
+of Kenya to the remarkable wilderness of Tanzania and
+Uganda, every journey brings you closer to nature.
+</p>
+</section>
+
+<section class="destinations" id="destinations">
+
+<div class="destination">
+<img
+src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=800&q=85"
+alt="African safari wildlife">
+
+<div class="destination-info">
+<small>01 / The Great Plains</small>
+<h3>Kenya</h3>
+<p>Explore the legendary Maasai Mara.</p>
+<a href="#contact">Discover Kenya ↗</a>
+</div>
+</div>
+
+<div class="destination">
+<img
+src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=800&q=85"
+alt="African wilderness">
+
+<div class="destination-info">
+<small>02 / Untamed Beauty</small>
+<h3>Tanzania</h3>
+<p>Discover endless plains and wildlife.</p>
+<a href="#contact">Discover Tanzania ↗</a>
+</div>
+</div>
+
+<div class="destination">
+<img
+src="https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=800&q=85"
+alt="Elephant in its natural habitat">
+
+<div class="destination-info">
+<small>03 / The Green Frontier</small>
+<h3>Uganda</h3>
+<p>Experience lush forests and rare wildlife.</p>
+<a href="#contact">Discover Uganda ↗</a>
+</div>
+</div>
+
+</section>
+
+<section class="bottom-cta" id="contact">
+<div>
+<h2>Ready to answer the call of the wild?</h2>
+<p>
+Let's create an unforgettable African safari
+designed around you.
+</p>
+</div>
+
+<a
+href="mailto:hello@sidaiafricasafaris.com"
+class="btn btn-primary">
+Plan Your Adventure ↗
+</a>
+</section>
+
+<footer>
+<span>© 2026 Nomads Africa Safaris</span>
+<span>Experience the Wild Heart of Africa.</span>
+</footer>
+
+</body>
+</html>
+
