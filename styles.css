@@ -15,18 +15,39 @@
     box-sizing: border-box;
 }
 
+html,
+body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "DM Sans", Arial, Helvetica, sans-serif;
 
     background: #f4f1e8;
 
     color: #18372b;
 
     line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Playfair Display", Georgia, serif;
+    line-height: 1.2;
 }
 
 a {
@@ -45,12 +66,14 @@ textarea {
    NAVIGATION
    ========================================== */
 
+header.navbar,
+header,
 .navbar {
     width: 100%;
 
-    padding: 21px 7%;
+    padding: 22px 5%;
 
-    background: #102c22;
+    background: rgba(13, 38, 29, 0.9);
 
     display: flex;
 
@@ -61,6 +84,8 @@ textarea {
     position: relative;
 
     z-index: 100;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 
@@ -69,40 +94,59 @@ textarea {
 .logo {
     margin-right: auto;
 
-    color: red;
+    color: white;
 
     text-decoration: none;
 
-    font-size: 21px;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 24px;
 
     font-weight: 700;
 
-    letter-spacing: 3px;
+    letter-spacing: 1px;
+
+    line-height: 1.1;
 }
 
 .logo span {
-    color: white;
+    display: block;
+
+    color: #d5a65a;
+
+    font-family: "DM Sans", Arial, sans-serif;
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    margin-top: 4px;
+
+    text-transform: uppercase;
 }
 
 
 /* ---------- Navigation ---------- */
 
-.navbar nav {
+.navbar nav,
+header nav,
+nav {
     display: flex;
 
     align-items: center;
 
-    gap: 30px;
+    gap: 28px;
 }
 
 .navbar nav a {
     position: relative;
 
-    color: #e8eee3;
+    color: #edf2e8;
 
     text-decoration: none;
 
-    font-size: 11px;
+    font-family: "DM Sans", Arial, sans-serif;
+    font-size: 13px;
 
     font-weight: 600;
 
@@ -125,14 +169,14 @@ textarea {
 
     height: 1px;
 
-    background: #c7d98f;
+    background: #d5a65a;
 
     transition: width 0.3s ease;
 }
 
 .navbar nav a:hover,
 .navbar nav a.active {
-    color: #c7d98f;
+    color: #d5a65a;
 }
 
 .navbar nav a:hover::after,
@@ -150,19 +194,23 @@ textarea {
 
     gap: 10px;
 
-    padding: 11px 16px;
+    padding: 11px 17px;
 
-    border: 1px solid rgba(199, 217, 143, 0.5);
+    border: 1px solid rgba(213, 166, 90, 0.7);
 
-    color: #dbe6c4;
+    background: #d5a65a;
+
+    color: #102c22;
 
     text-decoration: none;
 
-    font-size: 9px;
+    font-size: 11px;
 
     font-weight: 700;
 
     letter-spacing: 1.5px;
+
+    text-transform: uppercase;
 
     transition:
         background 0.3s ease,
@@ -175,7 +223,7 @@ textarea {
 }
 
 .nav-cta:hover {
-    background: #c7d98f;
+    background: #ffffff;
 
     color: #18372b;
 
@@ -372,7 +420,7 @@ textarea {
 .hero-content h1 span {
     color: #c7d98f;
 
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: "Playfair Display", Georgia, serif;
 
     font-style: italic;
 
@@ -553,6 +601,8 @@ textarea {
     font-weight: 700;
 
     letter-spacing: 3px;
+
+    text-transform: uppercase;
 }
 
 
@@ -580,8 +630,6 @@ textarea {
 }
 
 .contact-intro h2 {
-    font-family: Georgia, "Times New Roman", serif;
-
     font-size: clamp(42px, 5vw, 67px);
 
     line-height: 1;
@@ -589,6 +637,8 @@ textarea {
     color: #173b2d;
 
     margin: 20px 0 25px;
+
+    letter-spacing: -1px;
 }
 
 .contact-intro h2 span {
@@ -728,8 +778,6 @@ textarea {
 }
 
 .form-heading h2 {
-    font-family: Georgia, "Times New Roman", serif;
-
     font-size: 38px;
 
     color: #18372b;
@@ -894,7 +942,7 @@ form button:hover {
 }
 
 .paths-heading h2 {
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: "Playfair Display", Georgia, serif;
 
     font-size: clamp(43px, 5vw, 65px);
 
@@ -1038,7 +1086,7 @@ form button:hover {
 }
 
 .path-content h3 {
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: "Playfair Display", Georgia, serif;
 
     font-size: 38px;
 
@@ -1102,7 +1150,7 @@ form button:hover {
 }
 
 .why-heading h2 {
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: "Playfair Display", Georgia, serif;
 
     color: #18372b;
 
@@ -1168,7 +1216,7 @@ form button:hover {
 .why-card h3 {
     color: #18372b;
 
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: "Playfair Display", Georgia, serif;
 
     font-size: 27px;
 
@@ -1214,7 +1262,7 @@ form button:hover {
 }
 
 .conservation-content h2 {
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: "Playfair Display", Georgia, serif;
 
     font-size: clamp(40px, 5vw, 67px);
 
@@ -1315,7 +1363,7 @@ form button:hover {
 .small-card h3 {
     color: #18372b;
 
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: "Playfair Display", Georgia, serif;
 
     font-size: 30px;
 
@@ -1440,18 +1488,17 @@ footer {
 
 @media (max-width: 900px) {
 
+    header.navbar,
+    header,
     .navbar {
         padding: 20px 5%;
-
         gap: 20px;
     }
 
-    .navbar nav {
+    .navbar nav,
+    header nav,
+    nav {
         gap: 18px;
-    }
-
-    .nav-cta {
-        display: none;
     }
 
     .contact-section {
@@ -1495,50 +1542,46 @@ footer {
    MOBILE
    ========================================== */
 
-@media (max-width: 600px) {
+@media (max-width: 680px) {
 
     /* ---------- Navigation ---------- */
 
+    header.navbar,
+    header,
     .navbar {
-        padding: 18px 6%;
-
+        padding: 18px 5%;
         flex-wrap: wrap;
-
-        gap: 18px;
+        gap: 14px;
     }
 
     .logo {
         margin-right: 0;
-
-        font-size: 18px;
-    }
-
-    .navbar nav {
-        order: 3;
-
-        width: 100%;
-
-        justify-content: center;
-
-        flex-wrap: wrap;
-
-        gap: 12px 18px;
-
-        padding-top: 5px;
-    }
-
-    .navbar nav a {
-        font-size: 10px;
+        font-size: 20px;
     }
 
     .nav-cta {
         display: inline-flex;
-
         margin-left: auto;
+        padding: 9px 13px;
+        font-size: 10px;
+    }
 
-        padding: 9px 12px;
+    .navbar nav,
+    header nav,
+    nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px 18px;
+        padding-top: 8px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
 
-        font-size: 8px;
+    .navbar nav a,
+    header nav a,
+    nav a {
+        font-size: 11px;
     }
 
 
@@ -1574,11 +1617,11 @@ footer {
     }
 
     .hero-content h1 {
-        font-size: 52px;
+        font-size: clamp(34px, 8vw, 52px);
 
-        letter-spacing: -2.5px;
+        letter-spacing: -1.5px;
 
-        line-height: 0.96;
+        line-height: 1.05;
     }
 
     .hero-description {
@@ -1718,4 +1761,87 @@ footer {
         gap: 8px;
     }
 
+}
+
+@media (max-width: 480px) {
+
+    header.navbar,
+    header,
+    .navbar {
+        padding: 14px 4%;
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .logo span {
+        font-size: 9px;
+        letter-spacing: 3px;
+    }
+
+    .nav-cta {
+        padding: 8px 11px;
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .navbar nav,
+    header nav,
+    nav {
+        gap: 8px 14px;
+        padding-top: 6px;
+    }
+
+    .navbar nav a,
+    header nav a,
+    nav a {
+        font-size: 11px;
+        padding: 4px 2px;
+    }
+
+    .contact-hero {
+        padding: 60px 5% 80px;
+        min-height: 80vh;
+    }
+
+    .hero-primary {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .contact-section {
+        padding: 50px 5%;
+    }
+
+    .contact-intro h2 {
+        font-size: clamp(30px, 8vw, 42px);
+    }
+
+    .contact-form-container {
+        padding: 24px 16px;
+    }
+
+    .form-actions button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .paths-section,
+    .why-section,
+    .conservation-message {
+        padding: 55px 5%;
+    }
+
+    .paths-heading h2,
+    .why-heading h2,
+    .conservation-content h2 {
+        font-size: clamp(28px, 8vw, 40px);
+    }
+
+    .small-card {
+        padding: 35px 6%;
+    }
 }
