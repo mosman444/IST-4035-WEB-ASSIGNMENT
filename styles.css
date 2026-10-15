@@ -69,7 +69,7 @@ textarea {
 .logo {
     margin-right: auto;
 
-    color: #ffffff;
+    color: red;
 
     text-decoration: none;
 
@@ -81,7 +81,7 @@ textarea {
 }
 
 .logo span {
-    color: rgb(167, 248, 167)
+    color: white;
 }
 
 
