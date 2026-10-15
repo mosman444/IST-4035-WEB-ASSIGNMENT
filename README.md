@@ -40,9 +40,9 @@ The project focuses on creating a visually appealing, user-friendly, and respons
 
 ## Project Structure
 
-The project may be organized as follows:
+The project is be organized as follows:
 
-```text
+
 SafariCrest/
 ├── homepage.html
 ├── services.html
@@ -52,9 +52,9 @@ SafariCrest/
 │   └── style.css
 ├── images/
 └── README.md
-```
 
-*Note: Adjust the file names and folder structure above to match the actual files in the repository.*
+
+
 
 ## How to Run the Project
 
@@ -91,11 +91,6 @@ Possible future enhancements include:
 - Improving accessibility and mobile responsiveness.
 - Connecting visitors with verified tour operators and conservation organizations.
 
-## Project Status
-
-**Status:** In Development
-
-Safari Crest is currently a front-end website project. Features such as online bookings, databases, and other backend services may be added in future versions.
 
 ## Conclusion
 
