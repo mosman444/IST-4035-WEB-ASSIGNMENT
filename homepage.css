@@ -1,0 +1,293 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'DM Sans', sans-serif;
+background: #f5f1e8;
+color: #07382d;
+}
+
+header {
+background: #07382d;
+color: white;
+padding: 22px 8%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.logo {
+font-family: 'Playfair Display', serif;
+font-size: 22px;
+letter-spacing: 1px;
+}
+
+.logo span {
+display: block;
+font-family: 'DM Sans', sans-serif;
+font-size: 10px;
+letter-spacing: 4px;
+margin-top: 4px;
+}
+
+nav {
+display: flex;
+align-items: center;
+gap: 25px;
+}
+
+nav a {
+text-decoration: none;
+color: white;
+font-size: 13px;
+}
+
+nav .contact {
+border: 1px solid #d8b47b;
+padding: 11px 17px;
+}
+
+.hero {
+min-height: 600px;
+background:
+    linear-gradient(
+        90deg,
+        rgba(3, 35, 25, 0.78),
+        rgba(3, 35, 25, 0.15)
+    ),
+    url("https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
+display: flex;
+align-items: center;
+padding: 80px 8%;
+color: white;
+}
+
+.hero-content {
+max-width: 700px;
+}
+
+.eyebrow {
+color: #e4c18b;
+text-transform: uppercase;
+letter-spacing: 3px;
+font-size: 11px;
+margin-bottom: 22px;
+}
+
+h1 {
+font-family: 'Playfair Display', serif;
+font-size: clamp(44px, 7vw, 78px);
+font-weight: 500;
+line-height: 1.1;
+margin-bottom: 24px;
+}
+
+h1 span {
+color: #e4c18b;
+}
+
+.hero p {
+max-width: 470px;
+line-height: 1.9;
+font-size: 14px;
+color: #eee9df;
+}
+
+.buttons {
+display: flex;
+gap: 15px;
+margin-top: 30px;
+flex-wrap: wrap;
+}
+
+.btn {
+padding: 15px 23px;
+text-decoration: none;
+font-size: 12px;
+font-weight: 600;
+display: inline-block;
+}
+
+.btn-primary {
+background: #d96b36;
+color: white;
+}
+
+.btn-secondary {
+border: 1px solid white;
+color: white;
+}
+
+.intro {
+text-align: center;
+padding: 85px 8% 45px;
+}
+
+.intro h2 {
+font-family: 'Playfair Display', serif;
+font-size: clamp(32px, 4vw, 48px);
+font-weight: 500;
+margin-bottom: 20px;
+}
+
+.intro p {
+max-width: 620px;
+margin: auto;
+font-size: 13px;
+line-height: 1.9;
+color: #65756b;
+}
+
+.destinations {
+padding: 20px 8% 85px;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 22px;
+}
+
+.destination {
+height: 360px;
+position: relative;
+overflow: hidden;
+background: #07382d;
+}
+
+.destination img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform 0.4s;
+}
+
+.destination:hover img {
+transform: scale(1.06);
+}
+
+.destination::after {
+content: "";
+position: absolute;
+inset: 0;
+background: linear-gradient(
+    transparent 30%,
+    rgba(3, 30, 22, 0.9)
+);
+}
+
+.destination-info {
+position: absolute;
+z-index: 1;
+bottom: 25px;
+left: 23px;
+color: white;
+}
+
+.destination-info small {
+color: #e4c18b;
+text-transform: uppercase;
+letter-spacing: 2px;
+}
+
+.destination-info h3 {
+font-family: 'Playfair Display', serif;
+font-size: 32px;
+font-weight: 500;
+margin: 8px 0;
+}
+
+.destination-info p {
+font-size: 12px;
+margin-bottom: 18px;
+}
+
+.destination-info a {
+color: #e4c18b;
+font-size: 12px;
+text-decoration: none;
+border-bottom: 1px solid #e4c18b;
+padding-bottom: 5px;
+}
+
+.bottom-cta {
+background: #07382d;
+color: white;
+padding: 65px 8%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 25px;
+}
+
+.bottom-cta h2 {
+font-family: 'Playfair Display', serif;
+font-size: clamp(28px, 4vw, 42px);
+font-weight: 500;
+margin-bottom: 12px;
+}
+
+.bottom-cta p {
+color: #d0ddd5;
+font-size: 13px;
+line-height: 1.8;
+}
+
+footer {
+background: #042820;
+color: #c4d0c8;
+padding: 25px 8%;
+display: flex;
+justify-content: space-between;
+gap: 15px;
+font-size: 11px;
+}
+
+@media (max-width: 768px) {
+header {
+    padding: 20px 6%;
+}
+
+nav {
+    gap: 12px;
+}
+
+nav a {
+    font-size: 11px;
+}
+
+nav a:not(.contact) {
+    display: none;
+}
+
+.hero {
+    min-height: 570px;
+    padding: 65px 6%;
+    background-position: 60% center;
+}
+
+.destinations {
+    grid-template-columns: 1fr;
+    padding: 15px 6% 65px;
+}
+
+.destination {
+    height: 350px;
+}
+
+.intro {
+    padding: 65px 6% 35px;
+}
+
+.bottom-cta {
+    padding: 50px 6%;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+footer {
+    padding: 25px 6%;
+    flex-direction: column;
+}
+}
